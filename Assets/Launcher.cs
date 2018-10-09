@@ -7,7 +7,7 @@ public abstract class Launcher : MonoBehaviour
     public Vector3 spawnPosition;
     public GameObject projectile;
 
-    private void Fire()
+    protected virtual void Fire()
     {
         GameObject newProjectile = Instantiate<GameObject>(projectile);
         newProjectile.GetComponent<Projectile>().OnFire(this);
