@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public FlightEffect flightEffect;
     public Vector3 target;
 
+    private Launcher launcher;
     private bool inFlight = false;
 
     private void OnCollisionEnter(Collision collision)
@@ -19,13 +20,14 @@ public class Projectile : MonoBehaviour
             impactEffect.OnImpact(this, collision);
         }
     }
-    public void OnFire()
+    public void OnFire(Launcher launcher)
     {
+        this.launcher = launcher;
+        inFlight = true;
         if (fireEffect != null)
         {
             fireEffect.OnFire(this);
         }
-        inFlight = true;
     }
     private void Update()
     {
