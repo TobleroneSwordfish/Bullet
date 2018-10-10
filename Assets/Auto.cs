@@ -24,9 +24,10 @@ public class Auto : Launcher
     {
         while (true)
         {
-            if (Input.GetMouseButton(mouseButton))
+            if (Input.GetMouseButton(mouseButton) && Time.time > lastFire + refireTime)
             {
                 Fire();
+                lastFire = Time.time;
                 yield return new WaitForSeconds(refireTime);
             }
             else

@@ -302,11 +302,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Auto.cs" />
+    <Compile Include="Assets\Debris.cs" />
+    <Compile Include="Assets\DebrisAlt.cs" />
     <Compile Include="Assets\FireForward.cs" />
     <Compile Include="Assets\GhostFreeRoamCamera.cs" />
     <Compile Include="Assets\Launcher.cs" />
+    <Compile Include="Assets\PhysicsSetup.cs" />
     <Compile Include="Assets\Projectile.cs" />
     <Compile Include="Assets\Semi.cs" />
+    <Compile Include="Assets\SinEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

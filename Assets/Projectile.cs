@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour
     public FireEffect fireEffect;
     public FlightEffect flightEffect;
     public Vector3 target;
+    public int lifetime = 2;
+    public Debris debrisManager;
 
     private Launcher launcher;
     private bool inFlight = false;
@@ -28,12 +30,14 @@ public class Projectile : MonoBehaviour
         {
             fireEffect.OnFire(this);
         }
+        print("Projectile gameObject: " + gameObject);
+        debrisManager.AddDebris(lifetime, gameObject);
     }
     private void Update()
     {
         if (inFlight && flightEffect != null) //is null checking each update actually bad?
         {
-            flightEffect.Update(this);
+            flightEffect.EffectUpdate(this);
         }
     }
 }
@@ -69,8 +73,11 @@ public abstract class ImpactEffect : MonoBehaviour
 public abstract class FlightEffect : MonoBehaviour
 {
     public FlightEffect next;
-    public virtual void Update(Projectile p)
+    public virtual void EffectUpdate(Projectile p)
     {
-        next.Update(p);
+        if (next != null)
+        {
+            next.EffectUpdate(p);
+        }
     }
 }

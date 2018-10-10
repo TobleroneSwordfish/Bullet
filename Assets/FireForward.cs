@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireForward : FireEffect
 {
-    public float force = 10;
+    public float force = 300;
     public override void OnFire(Projectile p)
     {
         p.GetComponent<Rigidbody>().AddForceAtPosition(transform.forward * force, Vector3.zero);

@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Debris : MonoBehaviour
 {
-    private GameObject[] shit;
-    public void AddDebrs(GameObject debris)
+    public void AddDebris(float life, params GameObject[] objects)
     {
-
+        StartCoroutine(Delet(life, objects));
     }
-    private IEnumerator Delete(GameObject[] objects)
-    {
-        yield return 
-    }
-    private IEnumerator Iterate()
-    {
 
+    private IEnumerator Delet(float life, params GameObject[] objects)
+    {
+        yield return new WaitForSeconds(life);
+        foreach (GameObject obj in objects)
+        {
+            Destroy(obj);
+        }
     }
 }
