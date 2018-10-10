@@ -9,7 +9,7 @@ public abstract class Launcher : MonoBehaviour
 
     protected virtual void Fire()
     {
-        GameObject newProjectile = Instantiate<GameObject>(projectile);
+        GameObject newProjectile = Instantiate<GameObject>(projectile, transform.position + spawnPosition, transform.rotation);
         newProjectile.GetComponent<Projectile>().OnFire(this);
     }
 }
