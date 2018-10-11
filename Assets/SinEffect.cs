@@ -10,6 +10,7 @@ public class SinEffect : FlightEffect
     {
         float sinVal = Mathf.Sin(Time.frameCount * frequency) * amplitude;
         transform.position += sinVal * transform.up;
+        transform.RotateAround(transform.right, )
         base.EffectUpdate(p);
     }
 }
