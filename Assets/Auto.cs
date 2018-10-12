@@ -20,7 +20,7 @@ public class Auto : Launcher
             StartCoroutine("Pew");
         }
     }
-    IEnumerator Pew()
+    IEnumerator Pew() //pews
     {
         while (true)
         {

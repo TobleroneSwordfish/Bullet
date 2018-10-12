@@ -468,8 +468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next: {fileID: 0}
-  frequency: 0.2
-  amplitude: 0.1
+  frequency: 0.1
+  amplitude: 0.3
 --- !u!114 &1348885752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next: {fileID: 0}
-  force: 300
+  force: 50
 --- !u!114 &1348885753
 MonoBehaviour:
   m_ObjectHideFlags: 0

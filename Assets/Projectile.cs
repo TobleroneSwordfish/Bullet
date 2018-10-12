@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     public int lifetime = 2;
     public Debris debrisManager;
 
-    private Launcher launcher;
+    public Launcher launcher;
     private bool inFlight = false;
 
     private void OnCollisionEnter(Collision collision)
