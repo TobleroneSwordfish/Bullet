@@ -39,8 +39,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1952593131927362}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.018641401, y: -0, z: -0, w: 0.9998262}
+  m_LocalPosition: {x: 0, y: -0.021262132, z: 33.271957}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,6 +134,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   lifetime: 2
   debrisManager: {fileID: 0}
+  launcher: {fileID: 0}
 --- !u!114 &114536932591866022
 MonoBehaviour:
   m_ObjectHideFlags: 1

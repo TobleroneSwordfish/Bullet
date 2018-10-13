@@ -285,7 +285,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1087260314}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 161f7709f3674f348ab2e2c4bb3454ea, type: 3}
   m_Name: 
@@ -374,7 +374,17 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1952593131927362, guid: f62f533896b7b604e96d543d8e004022, type: 2}
+      propertyPath: m_Name
+      value: Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536932591866022, guid: f62f533896b7b604e96d543d8e004022,
+        type: 2}
+      propertyPath: next
+      value: 
+      objectReference: {fileID: 1460326721}
+    m_RemovedComponents:
+    - {fileID: 114059496026718864, guid: f62f533896b7b604e96d543d8e004022, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: f62f533896b7b604e96d543d8e004022, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1306339842
@@ -500,6 +510,7 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   lifetime: 2
   debrisManager: {fileID: 822964441}
+  launcher: {fileID: 0}
 --- !u!136 &1348885754
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5163,6 +5174,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1952593131927362, guid: f62f533896b7b604e96d543d8e004022,
     type: 2}
   m_PrefabInternal: {fileID: 1294264766}
+--- !u!114 &1460326721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460326720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabf6f1147e3b0b408c52ecc23612d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next: {fileID: 0}
+  resetTime: 0.25
 --- !u!1 &1507255146
 GameObject:
   m_ObjectHideFlags: 0
@@ -5254,13 +5278,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1852335568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc09aa38fcef6604d8e3f148d545bf4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {x: 0, y: -0.5, z: 0}
-  projectile: {fileID: 1348885749}
+  projectile: {fileID: 1460326720}
   refireTime: 0.1
   mouseButton: 0
 --- !u!65 &1852335570
