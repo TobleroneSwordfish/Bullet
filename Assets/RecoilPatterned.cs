@@ -30,7 +30,7 @@ public class RecoilPatterned : FireEffect
     private Cycle cycle;
     private bool fired = false;
 
-    private void Start()
+    private void Awake()
     {
         cycle = new Cycle(pattern.Length - 1);
     }

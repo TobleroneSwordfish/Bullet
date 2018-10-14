@@ -25,8 +25,8 @@ GameObject:
   - component: {fileID: 114237413943832794}
   - component: {fileID: 114536932591866022}
   - component: {fileID: 54392941033934016}
-  - component: {fileID: 114059496026718864}
-  m_Layer: 0
+  - component: {fileID: 114010381750742066}
+  m_Layer: 8
   m_Name: Basic bitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,9 +39,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1952593131927362}
-  m_LocalRotation: {x: 0.018641401, y: -0, z: -0, w: 0.9998262}
-  m_LocalPosition: {x: 0, y: -0.021262132, z: 33.271957}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,20 +103,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &114059496026718864
+--- !u!114 &114010381750742066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1952593131927362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4063a544f0665c458bc17161ecdb5d6, type: 3}
+  m_Script: {fileID: 11500000, guid: aabf6f1147e3b0b408c52ecc23612d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   next: {fileID: 0}
-  frequency: 0.2
-  amplitude: 0.1
+  resetTime: 0.25
 --- !u!114 &114237413943832794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactEffect: {fileID: 0}
   fireEffect: {fileID: 114536932591866022}
-  flightEffect: {fileID: 114059496026718864}
+  flightEffect: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
   lifetime: 2
   debrisManager: {fileID: 0}
@@ -146,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e35e7705be3f64c8248cab5d815b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: {fileID: 0}
+  next: {fileID: 114010381750742066}
   force: 300
 --- !u!135 &135598796494970792
 SphereCollider:

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Auto.cs" />
+    <Compile Include="Assets\Beam.cs" />
     <Compile Include="Assets\Debris.cs" />
     <Compile Include="Assets\DebrisAlt.cs" />
     <Compile Include="Assets\FireForward.cs" />
@@ -69,19 +70,14 @@
     <Compile Include="Assets\Launcher.cs" />
     <Compile Include="Assets\PhysicsSetup.cs" />
     <Compile Include="Assets\Projectile.cs" />
+    <Compile Include="Assets\RecoilPatterned.cs" />
     <Compile Include="Assets\Semi.cs" />
     <Compile Include="Assets\SinEffect.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Typhon/Documents/Unity projects/Bullet/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Typhon/Documents/Unity projects/Bullet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/Typhon/Documents/Unity projects/Bullet/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Typhon/Documents/Unity projects/Bullet/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
