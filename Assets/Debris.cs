@@ -8,6 +8,20 @@ public class Debris : MonoBehaviour
     {
         StartCoroutine(Delet(life, objects));
     }
+    public void AddDebris(int life, params GameObject[] objects)
+    {
+        StartCoroutine(DeletFrames(life, objects));
+    }
+
+    private IEnumerator DeletFrames(int frames, params GameObject[] objects)
+    {
+        int end = Time.frameCount + frames;
+        yield return new WaitUntil(() => Time.frameCount == end);
+        foreach (GameObject obj in objects)
+        {
+            Destroy(obj);
+        }
+    }
 
     private IEnumerator Delet(float life, params GameObject[] objects)
     {

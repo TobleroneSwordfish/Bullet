@@ -61,18 +61,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Auto.cs" />
-    <Compile Include="Assets\Beam.cs" />
+    <Compile Include="Assets\BeamShit.cs" />
+    <Compile Include="Assets\BeamTest.cs" />
     <Compile Include="Assets\Debris.cs" />
     <Compile Include="Assets\DebrisAlt.cs" />
-    <Compile Include="Assets\FireForward.cs" />
+    <Compile Include="Assets\FireEffects\FireForward.cs" />
+    <Compile Include="Assets\FireEffects\RecoilPatterned.cs" />
+    <Compile Include="Assets\FlightEffects\SinEffect.cs" />
     <Compile Include="Assets\GhostFreeRoamCamera.cs" />
-    <Compile Include="Assets\Launcher.cs" />
+    <Compile Include="Assets\ImpactEffects\Bounce.cs" />
+    <Compile Include="Assets\LaserColourChange.cs" />
+    <Compile Include="Assets\LaserSight.cs" />
+    <Compile Include="Assets\Launchers\Auto.cs" />
+    <Compile Include="Assets\Launchers\Launcher.cs" />
+    <Compile Include="Assets\Launchers\Semi.cs" />
     <Compile Include="Assets\PhysicsSetup.cs" />
     <Compile Include="Assets\Projectile.cs" />
-    <Compile Include="Assets\RecoilPatterned.cs" />
-    <Compile Include="Assets\Semi.cs" />
-    <Compile Include="Assets\SinEffect.cs" />
+    <None Include="Assets\thunk.txt" />
+    <None Include="Assets\Standard-overlay.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Typhon/Documents/Unity projects/Bullet/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

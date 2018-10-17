@@ -9,9 +9,9 @@ public class Projectile : MonoBehaviour
     public FireEffect fireEffect;
     public FlightEffect flightEffect;
     public Vector3 target;
-    public int lifetime = 2;
+    public float lifetime = 2;
     public Debris debrisManager;
-
+    [System.NonSerialized]
     public Launcher launcher;
     private bool inFlight = false;
 

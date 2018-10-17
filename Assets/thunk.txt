@@ -1,0 +1,8 @@
+projectile eating projectile
+auto-length adjusting beam
+bouncing beam? maybe a little annoying
+actual FPS mechanics - recoil, spread, bloom etc
+ads is pointless tbh
+different fire rates r/l click with appropriate recoil/spread adjustments
+implement damage/health system
+actual character movement, check asset store
