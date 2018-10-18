@@ -73,10 +73,13 @@
     <Compile Include="Assets\LaserColourChange.cs" />
     <Compile Include="Assets\LaserSight.cs" />
     <Compile Include="Assets\Launchers\Auto.cs" />
+    <Compile Include="Assets\Launchers\AutoFire.cs" />
     <Compile Include="Assets\Launchers\Launcher.cs" />
     <Compile Include="Assets\Launchers\Semi.cs" />
     <Compile Include="Assets\PhysicsSetup.cs" />
     <Compile Include="Assets\Projectile.cs" />
+    <Compile Include="Assets\ProjectileVoid.cs" />
+    <Compile Include="Assets\Suck.cs" />
     <None Include="Assets\thunk.txt" />
     <None Include="Assets\Standard-overlay.shader" />
     <Reference Include="UnityEditor.StandardEvents">
