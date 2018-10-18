@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoFire : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+public class AutoFire : Launcher
+{
+    public float refireTime;
+    private float 
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+		if ()
 	}
 }
