@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
@@ -8,6 +9,7 @@ public class Projectile : MonoBehaviour
     public ImpactEffect impactEffect;
     public FireEffect fireEffect;
     public FlightEffect flightEffect;
+    public DeathEffect deathEffect;
     public Vector3 target;
     public float lifetime = 2;
     public Debris debrisManager;
@@ -30,8 +32,15 @@ public class Projectile : MonoBehaviour
         {
             fireEffect.OnFire(this);
         }
-        print("Projectile gameObject: " + gameObject);
-        debrisManager.AddDebris(lifetime, gameObject);
+        //print("Projectile gameObject: " + gameObject);
+        if (deathEffect != null)
+        {
+            debrisManager.AddDebris(lifetime, (GameObject obj) => deathEffect.OnDeath(obj), gameObject);
+        }
+        else
+        {
+            debrisManager.AddDebris(lifetime, (obj) => { }, gameObject);
+        }
     }
     private void Update()
     {
@@ -78,6 +87,18 @@ public abstract class FlightEffect : MonoBehaviour
         if (next != null)
         {
             next.EffectUpdate(p);
+        }
+    }
+}
+
+public abstract class DeathEffect : MonoBehaviour
+{
+    public DeathEffect next;
+    public virtual void OnDeath(GameObject obj)
+    {
+        if (next != null)
+        {
+            next.OnDeath(obj);
         }
     }
 }

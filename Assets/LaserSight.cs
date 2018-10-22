@@ -41,7 +41,7 @@ public class LaserSight : MonoBehaviour
                     Destroy(obj);
                 }
             }
-            Beams.Beam.BeamInstance beamInstance = Beam.Project(beamObj, transform.position, parent.forward, length, transform, 3);
+            Beam.BeamInstance beamInstance = Beam.Project(beamObj, transform.position, parent.forward, length, transform, 3);
             beams = beamInstance.beamObjects;
             foreach (GameObject beam in beams)
             {

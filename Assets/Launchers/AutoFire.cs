@@ -5,10 +5,15 @@ using UnityEngine;
 public class AutoFire : Launcher
 {
     public float refireTime;
-    private float 
+    private float timePassed;
 	// Update is called once per frame
 	void Update ()
     {
-		if ()
+        timePassed += Time.deltaTime;
+        if (timePassed > refireTime)
+        {
+            Fire();
+            timePassed = 0;
+        }
 	}
 }
