@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Debris;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
@@ -12,7 +13,7 @@ public class Projectile : MonoBehaviour
     public DeathEffect deathEffect;
     public Vector3 target;
     public float lifetime = 2;
-    public Debris debrisManager;
+    //public DebrisScript debrisManager;
     [System.NonSerialized]
     public Launcher launcher;
     private bool inFlight = false;
@@ -35,11 +36,11 @@ public class Projectile : MonoBehaviour
         //print("Projectile gameObject: " + gameObject);
         if (deathEffect != null)
         {
-            debrisManager.AddDebris(lifetime, (GameObject obj) => deathEffect.OnDeath(obj), gameObject);
+            DebrisManager.AddDebrisTime(lifetime, (GameObject obj) => deathEffect.OnDeath(obj), gameObject);
         }
         else
         {
-            debrisManager.AddDebris(lifetime, (obj) => { }, gameObject);
+            DebrisManager.AddDebrisTime(lifetime, (obj) => { }, gameObject);
         }
     }
     private void Update()

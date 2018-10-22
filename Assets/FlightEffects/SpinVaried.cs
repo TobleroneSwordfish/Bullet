@@ -22,7 +22,7 @@ public class SpinVaried : FlightEffect
         if (elapsed >= switchTime)
         {
             axis = new Vector3(RandomAngle(), RandomAngle(), RandomAngle());
-            Debug.Log("axis updated to " + axis);
+            //Debug.Log("axis updated to " + axis);
             elapsed = 0;
         }
         base.EffectUpdate(p);

@@ -300,9 +300,11 @@
   <ItemGroup>
     <Compile Include="Assets\BeamShit.cs" />
     <Compile Include="Assets\BeamTest.cs" />
+    <Compile Include="Assets\DeathEffects\SpawnObject.cs" />
     <Compile Include="Assets\DeathEffects\TestDeathEffect.cs" />
     <Compile Include="Assets\Debris.cs" />
     <Compile Include="Assets\DebrisAlt.cs" />
+    <Compile Include="Assets\DebrisScript.cs" />
     <Compile Include="Assets\FireEffects\FireForward.cs" />
     <Compile Include="Assets\FireEffects\RecoilPatterned.cs" />
     <Compile Include="Assets\FlightEffects\SinEffect.cs" />
@@ -315,9 +317,11 @@
     <Compile Include="Assets\Launchers\AutoFire.cs" />
     <Compile Include="Assets\Launchers\Launcher.cs" />
     <Compile Include="Assets\Launchers\Semi.cs" />
+    <Compile Include="Assets\ParticleDespawn.cs" />
     <Compile Include="Assets\PhysicsSetup.cs" />
     <Compile Include="Assets\Projectile.cs" />
     <Compile Include="Assets\ProjectileVoid.cs" />
+    <Compile Include="Assets\SelfDestroy.cs" />
     <Compile Include="Assets\Suck.cs" />
   </ItemGroup>
   <ItemGroup>

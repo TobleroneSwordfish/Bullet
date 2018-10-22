@@ -644,8 +644,13 @@ Prefab:
     - target: {fileID: 114056333077936480, guid: ad60249a53f037141818b7c9ca9c7152,
         type: 2}
       propertyPath: lifetime
-      value: 200
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114056333077936480, guid: ad60249a53f037141818b7c9ca9c7152,
+        type: 2}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 243874107}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad60249a53f037141818b7c9ca9c7152, type: 2}
   m_IsPrefabAsset: 0
@@ -668,6 +673,19 @@ MonoBehaviour:
   next: {fileID: 0}
   switchTime: 0.5
   rotSpeed: 100
+--- !u!114 &243874107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243874105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ca50a4005e4c945bc6b0ddbed4d166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next: {fileID: 0}
+  obj: {fileID: 1987250664364436, guid: d7c83d48cdb1c1245be571bc75e58d5c, type: 2}
 --- !u!114 &243874113 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114958097258593016, guid: ad60249a53f037141818b7c9ca9c7152,
@@ -1537,7 +1555,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 822964440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c183b0b5aed1d1f489300abf1085b7cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 63c7406417295d54897da55e53304a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &822964442
@@ -2683,6 +2701,7 @@ MonoBehaviour:
   impactEffect: {fileID: 0}
   fireEffect: {fileID: 1348885752}
   flightEffect: {fileID: 1348885751}
+  deathEffect: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
   lifetime: 2
   debrisManager: {fileID: 822964441}

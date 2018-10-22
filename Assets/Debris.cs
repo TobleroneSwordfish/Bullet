@@ -1,38 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using UnityEngine;
 
-public class Debris : MonoBehaviour
+namespace Debris
 {
-    //public delegate void ExitMethod(GameObject obj);
-    public void AddDebris(float life, Action<GameObject> method, params GameObject[] objects)
+    public static class DebrisManager
     {
-        StartCoroutine(Delet(life, method, objects));
-    }
-    public void AddDebris(int life, Action<GameObject> method, params GameObject[] objects)
-    {
-        StartCoroutine(DeletFrames(life, method, objects));
-    }
-
-    private IEnumerator DeletFrames(int frames, Action<GameObject> method, params GameObject[] objects)
-    {
-        int end = Time.frameCount + frames;
-        yield return new WaitUntil(() => Time.frameCount == end);
-        foreach (GameObject obj in objects)
+        public static DebrisScript instance;
+        public static void AddDebrisTime(float life, Action<GameObject> method = null, params GameObject[] objects)
         {
-            method(obj);
-            Destroy(obj);
+            instance.AddDebrisSecs(life, method, objects);
         }
-    }
-
-    private IEnumerator Delet(float life, Action<GameObject> method, params GameObject[] objects)
-    {
-        yield return new WaitForSeconds(life);
-        foreach (GameObject obj in objects)
+        public static void AddDebrisFrames(int life, Action<GameObject> method = null, params GameObject[] objects)
         {
-            method(obj);
-            Destroy(obj);
+            instance.AddDebrisFrames(life, method, objects);
         }
     }
 }
